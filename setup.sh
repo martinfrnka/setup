@@ -1,7 +1,7 @@
 #!/bin/bash
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
-
+sudo apt-get install -y python-software-properties python g++ make
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git
@@ -39,7 +39,7 @@ fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
-git clone https://github.com/martinfrnka/dotfiles.git
+git clone https://github.com/startup-class/dotfiles.git
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
